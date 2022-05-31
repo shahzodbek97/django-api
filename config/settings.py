@@ -47,7 +47,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django_session_timeout.middleware.SessionTimeoutMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',  # django-session-timeout
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -55,9 +55,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# django-session-timeout
 SESSION_EXPIRE_SECONDS = 5
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
-
 SESSION_TIMEOUT_REDIRECT = 'admin/'
 
 ROOT_URLCONF = 'config.urls'
